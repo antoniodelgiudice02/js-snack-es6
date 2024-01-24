@@ -38,7 +38,11 @@ const studentList = [
 ];
 
 
+const nameMapper = studentList.map((student) => student.nome.toUpperCase());
+console.log(nameMapper)
 
-studentList.forEach((student) => console.log(student.nome.toUpperCase()))
-studentList.forEach((student) => student.grades > 70 ? console.log(student.nome) : false)
-studentList.forEach((student) => student.grades > 70 && student.id > 120 ? console.log(student.nome) : false)
+const studentFilterUno = studentList.filter((student) => student.grades > 70)
+console.log(studentFilterUno)
+
+const studentFilterDue = studentList.filter((student) => student.grades > 70 && student.id > 120)
+console.log(studentFilterDue)
